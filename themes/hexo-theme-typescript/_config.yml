@@ -1,0 +1,68 @@
+# Meta
+description: 终不辜负。
+keywords: hexo,theme,minimal,otakism
+site_desc: spring chill
+
+# Navigation
+navigation:
+- name: 主页
+  slug: home
+  url: /
+- name: 关于
+  slug: about
+  url: /about
+- name: 归档
+  slug: archives
+  url: /archives
+
+# Search
+search: 
+  enable: false
+  service: google # google/hexo/algolia/azure/baidu
+  # google 
+  google_api_key:
+  google_engine_id:
+  # algolia
+  algolia_app_id:
+  algolia_api_key:
+  algolia_index_name:
+  # azure
+  azure_service_name:
+  azure_index_name:
+  azure_query_key:
+
+# Miscellaneous
+google_analytics:
+favicon: /favicon.png
+author_url: https://example.com
+
+# Less
+less:
+  compress: true
+
+# use url, not username
+social:
+- slug: email
+  url: #mailto:me@example.com
+- slug: github
+  url: #https://github.com/<id>
+- slug: twitter
+  url: #https://twitter.com/<id>
+- slug: rss
+	url: /atom.xml
+- slug: facebook
+  url: #https://www.facebook.com/<id>
+- slug: linkedin
+  url: #https://www.linkedin.com/in/<id>
+- slug: sina-weibo
+  url: #http://weibo.com/<id>
+- slug: tumblr
+  url: #http://<id>.tumblr.com
+- slug: dribbble
+  url: #https://dribbble.com/<id>
+- slug: pinterest
+  url: #https://www.pinterest.com/<id>
+- slug: instagram
+  url: #https://instagram.com/<id>
+- slug: behance
+  url: #https://www.behance.net/<id>

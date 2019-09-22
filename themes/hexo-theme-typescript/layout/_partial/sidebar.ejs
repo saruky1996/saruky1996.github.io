@@ -1,0 +1,31 @@
+<div class="site-sidebar" id="site-sidebar">
+    <div class="site-bio">
+        <div class="about-me clearfix">
+            <div class="avatar">
+                <img src="<%= url_for('/images/avatar.jpg') %>">
+            </div>
+            <div class="info">
+                <a class="name dark-btn" href="<%= url_for('/about') %>"><%= theme.author %></a>
+            </div>
+            <div class="info">
+                <span class="item desc"><%= theme.description %></span>
+            </div>
+        </div>
+        <div class="menu section">
+            <ul class="clearfix">
+                <% theme.navigation.forEach(function(value, index) {
+                if (value.url && value.slug && value.name) { %>
+                    <% if (index % 2 == 0) { %>
+                        <li class="left">
+                    <% } else { %>
+                        <li class="right">
+                    <% } %>
+                            <a href="<%= url_for(value.url) %>" onfocus="this.blur()" class="nav-<%= value.slug %>  dark-btn block">
+                                <%= value.name %>
+                            </a>
+                        </li>
+                <% } }); %>
+            </ul>
+        </div>
+    </div>
+</div>
