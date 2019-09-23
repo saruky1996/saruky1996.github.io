@@ -80,4 +80,4 @@ theme: hexo-theme-typescript
 deploy:
   type: git
   repo: https://github.com/saruky1996/saruky1996.github.io.git
-  branch: gh-pages
+  branch: master

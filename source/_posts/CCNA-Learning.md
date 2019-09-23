@@ -2,7 +2,7 @@
 title: CCNA培训学习笔记
 date: 2017-06-20 09:59:07
 categories: 
-  - 学习记录
+  - 学习
 tags: 
   - Cisco
   - CCNA

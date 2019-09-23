@@ -2,7 +2,7 @@
 title: PHP基础学习笔记
 date: 2016-07-17 22:12:35
 categories: 
-  - 学习记录
+  - 学习
 tags: 
   - PHP
   - 学习记录

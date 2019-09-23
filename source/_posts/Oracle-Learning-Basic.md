@@ -2,7 +2,7 @@
 title: Oracle数据库基础学习笔记
 date: 2016-07-18 14:13:31
 categories: 
-    - 学习记录
+    - 学习
 tags: 
     - Oracle
     - SQL

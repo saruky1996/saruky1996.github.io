@@ -14,6 +14,11 @@ navigation:
 - name: 归档
   slug: archives
   url: /archives
+- name: 链接
+  slug: links
+  url: https://lwll.github.io/better-call-me-pumpkin
+  external: true
+
 
 # Search
 search: 

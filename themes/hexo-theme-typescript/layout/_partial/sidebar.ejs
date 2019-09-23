@@ -13,18 +13,38 @@
         </div>
         <div class="menu section">
             <ul class="clearfix">
-                <% theme.navigation.forEach(function(value, index) {
+                <% var count = 0; %>
+                <% theme.navigation.forEach(function(value) {
                 if (value.url && value.slug && value.name) { %>
-                    <% if (index % 2 == 0) { %>
+                    <% if (count % 2 == 0) { %>
                         <li class="left">
                     <% } else { %>
                         <li class="right">
                     <% } %>
+                        <% if (value.external) { %>
+                            <a href="<%= value.url %>" onfocus="this.blur()" class="nav-<%= value.slug %>  dark-btn block">
+                                <%= value.name %>
+                        <% } else { %>
                             <a href="<%= url_for(value.url) %>" onfocus="this.blur()" class="nav-<%= value.slug %>  dark-btn block">
+                                <%= value.name %>
+                        <% } %>
+                            </a>
+                        </li>
+                <% count ++; %>
+                <% } }); %>
+
+                <% site.categories.forEach(function(value) { %>
+                    <% if (count % 2 == 0) { %>
+                        <li class="left">
+                    <% } else { %>
+                        <li class="right">
+                    <% } %>
+                            <a href="<%= url_for('/categories/' + value.name) %>" onfocus="this.blur()" class="nav-<%= value.slug %>  dark-btn block">
                                 <%= value.name %>
                             </a>
                         </li>
-                <% } }); %>
+                <% count ++; %>
+                <% }); %>
             </ul>
         </div>
     </div>
