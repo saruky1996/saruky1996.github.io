@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-23T13:28:22.642Z</updated>
+  <updated>2019-09-30T13:47:04.147Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>2019-09-21-Daily</title>
+    <title>如何下载B站的音视频并进行简单剪辑</title>
+    <link href="http://yoursite.com/2019/09/30/download-audio-on-jijidown/"/>
+    <id>http://yoursite.com/2019/09/30/download-audio-on-jijidown/</id>
+    <published>2019-09-30T13:14:13.000Z</published>
+    <updated>2019-09-30T13:47:04.147Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近发现了一个B站的宝藏UP主<a href="https://space.bilibili.com/25732134?from=search&seid=6487862725407631181" target="_blank" rel="noopener">@MiDi匠做MiDi</a>，非常擅长扒音轨，并且很无私的将成果奉献出来。最喜欢就是他的 <code>周杰伦只听人声就亏了</code> 系列，全部都是精品！</p><p>但是每次上B站都麻烦，就想把音频扒下来放移动设备里听。而且因为是扒音轨的，里面还有很多乐器的分别试听，时间也比较长，还需要进行简单的剪辑。</p><a id="more"></a><h2 id="小工具列表"><a href="#小工具列表" class="headerlink" title="小工具列表"></a>小工具列表</h2><table><thead><tr><th>工具</th><th>用途</th><th>地址</th></tr></thead><tbody><tr><td>jijidown</td><td>用于解析B站文件，可以提供视频1080p、480p、音频、封面、弹幕等多种文件的下载</td><td><a href="https://www.jijidown.com/" target="_blank" rel="noopener">https://www.jijidown.com/</a></td></tr><tr><td>Online MP3 Cuter</td><td>在线的MP3剪辑和格式转换工具</td><td><a href="https://mp3cut.net/cn/" target="_blank" rel="noopener">https://mp3cut.net/cn/</a></td></tr></tbody></table><h2 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h2><ol><li>前往jijidown的主页，由于web版常常出现下载失败的问题，因此建议先下载客户端</li><li>前往B站，复制需要下载音视频的地址</li><li>打开jijidown客户端，粘贴刚才复制好的地址，回车跳转至下载页面，选择下载视频或音频</li><li>将下载好的音频导入Online MP3 Cuter中，进行简单处理</li><li>处理完成后，点击剪辑，自动开始Encoding过程，首次进行这个过程将会比较长</li><li>点击保存，选择下载目录，Done~</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近发现了一个B站的宝藏UP主&lt;a href=&quot;https://space.bilibili.com/25732134?from=search&amp;seid=6487862725407631181&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;@MiDi匠做MiDi&lt;/a&gt;，非常擅长扒音轨，并且很无私的将成果奉献出来。最喜欢就是他的 &lt;code&gt;周杰伦只听人声就亏了&lt;/code&gt; 系列，全部都是精品！&lt;/p&gt;&lt;p&gt;但是每次上B站都麻烦，就想把音频扒下来放移动设备里听。而且因为是扒音轨的，里面还有很多乐器的分别试听，时间也比较长，还需要进行简单的剪辑。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="日常" scheme="http://yoursite.com/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+      <category term="日常记录" scheme="http://yoursite.com/tags/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/"/>
+    
+      <category term="防忘" scheme="http://yoursite.com/tags/%E9%98%B2%E5%BF%98/"/>
+    
+      <category term="小工具" scheme="http://yoursite.com/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2019年9月21日</title>
     <link href="http://yoursite.com/2019/09/23/2019-09-21-Daily/"/>
     <id>http://yoursite.com/2019/09/23/2019-09-21-Daily/</id>
     <published>2019-09-23T13:19:53.000Z</published>
-    <updated>2019-09-23T13:28:22.642Z</updated>
+    <updated>2019-09-30T13:22:57.585Z</updated>
     
     <content type="html"><![CDATA[<p>才刚九月中旬天气就开始变化无常，前几天还是一身夏日装束，到了周末却突然凉风瑟瑟，俨然已经是初秋了。这个周末，是九九拍板决定去凤凰街压马路，一边闲逛一边吃吃喝喝。 <em>凤凰街南抵十全街，中段在原南仓桥（1958年拆除）与十梓街垂直交叉，北出干将东路。</em> 与之前去过的十全街、相门、苏州大学和平江路都很近，只需要地铁到临顿路2号口出，直行一小段就到了凤凰路与干将东路的路口了。</p><a id="more"></a>]]></content>
     
