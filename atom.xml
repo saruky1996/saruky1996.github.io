@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-30T13:47:04.147Z</updated>
+  <updated>2020-05-17T06:32:47.839Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LeetCode刷题记录</title>
+    <link href="http://yoursite.com/2020/05/17/LeetCode-Records/"/>
+    <id>http://yoursite.com/2020/05/17/LeetCode-Records/</id>
+    <published>2020-05-17T06:31:00.000Z</published>
+    <updated>2020-05-17T06:32:47.839Z</updated>
+    
+    <content type="html"><![CDATA[<p>@[toc]</p><h2 id="总体进度"><a href="#总体进度" class="headerlink" title="总体进度"></a>总体进度</h2><h2 id="分类详情"><a href="#分类详情" class="headerlink" title="分类详情"></a>分类详情</h2><h3 id="简单"><a href="#简单" class="headerlink" title="简单"></a>简单</h3><h4 id="69-x-的平方根"><a href="#69-x-的平方根" class="headerlink" title="69. x 的平方根"></a>69. x 的平方根</h4><p><code>二分查找</code><br>题目：<a href="https://leetcode-cn.com/problems/sqrtx/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/sqrtx/</a><br>通过/提交：1/1<br>思路：找某个数的平方根，只需要找到一个res使得res<em>res小于等于x且(res+1)</em>(res+1)大于x即可<br>错误：没注意直接用了sqrt了…</p><h4 id="155-最小栈"><a href="#155-最小栈" class="headerlink" title="155. 最小栈"></a>155. 最小栈</h4><p>题目：<a href="https://leetcode-cn.com/problems/min-stack/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/min-stack/</a><br>通过/提交：1/2<br>思路：和普通栈最大的不同就是要能够返回栈内的最小元素。因此使用了额外空间，建立了一个有序的栈内值的数组。在栈执行push操作的时候，需要准确找到位置并把新元素推入其中，即使存在相同值也要加入；pop操作的时候，到数组内删除一个与pop元素相同的值。在getMin的时候直接返回数组第一个元素即可。</p><h4 id="136-只出现一次的数字"><a href="#136-只出现一次的数字" class="headerlink" title="136. 只出现一次的数字"></a>136. 只出现一次的数字</h4><p><code>位运算</code> <code>哈希表</code><br>题目：<a href="https://leetcode-cn.com/problems/single-number/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/single-number/</a><br>通过/提交：1/1<br>思路：骚操作，位运算异或 ^=，即一个数异或自己后为0。数字0异或任何数字都等于那个数字，直接把数组中所有元素都放在一起进行异或运算，最后得到的结果就是只出现了一次的数字。</p><h4 id="572-另一个树的子树"><a href="#572-另一个树的子树" class="headerlink" title="572. 另一个树的子树"></a>572. 另一个树的子树</h4><p><code>二叉树</code> <code>子树</code> <code>相同树</code><br>题目：<a href="https://leetcode-cn.com/problems/subtree-of-another-tree/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/subtree-of-another-tree/</a><br>通过/提交：1/2<br>思路：先说结论，一个二叉树的子树要么是它本身，要么是它左子树的子树，要么是它右子树的子树，依此规律进行递归。写成代码则为<code>isEqual(s,t) || isSubtree(s.left, t) || isSubtree(s.right, t)</code><br>注意点：在判断相等时需要注意，题目中如果树已经到达底部，再继续的话，传入的Node数据会直接为null，那么在判断相等时要考虑 ①当前节点同时为null，同时到底，相等 ②只有一个节点为null，一个还有叶子节点一个没有，不相等</p><h4 id="888-公平的糖果交换"><a href="#888-公平的糖果交换" class="headerlink" title="888. 公平的糖果交换"></a>888. 公平的糖果交换</h4><p>题目：<a href="https://leetcode-cn.com/problems/fair-candy-swap/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/fair-candy-swap/</a><br>通过/提交：1/2<br>思路：通过交换数组元素来到达和相同，因此很容易想到解题的关键在于找到两个数组和S1与S2的差值d，与需要交换的元素之间的关系。即元素a1与元素a2之间的差值，应正好为d/2，且无需考虑小数与正负的情况。<br>错误：多余地考虑了正负情况，其实两个差值的符号保持一致即可。</p><h3 id="中等"><a href="#中等" class="headerlink" title="中等"></a>中等</h3><h4 id="5-最长回文子串"><a href="#5-最长回文子串" class="headerlink" title="5. 最长回文子串"></a>5. 最长回文子串</h4><p><code>字符串</code><br>题目：<a href="https://leetcode-cn.com/problems/longest-palindromic-substring/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/longest-palindromic-substring/</a><br>通过/提交：1/3<br>思路：由于回文串以中间点为中心（1个或2个数）两边均对称，因此考虑从头开始，以1个点或2个点（p == p+1）为中心，向两侧遍历进行判断。<br>错误：忘记如果2个点为中心成立的话，需要先看看length = 2是否大于之前判断得到的maxLength</p><h4 id="50-Pow-x-n"><a href="#50-Pow-x-n" class="headerlink" title="50. Pow(x, n)"></a>50. Pow(x, n)</h4><p><code>数学</code> <code>快速幂</code><br>题目：<a href="https://leetcode-cn.com/problems/powx-n/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/powx-n/</a><br>通过/提交：1/2<br>思路：递归执行，每次都将结果拆解为 x的n次方 = （x的n/2次方）的平方【偶数】或者 （x的n-1次方）乘x【奇数 -1后又变偶数】，但注意如果是负数次幂，则是（x的n+1次方）乘1/x</p><h4 id="211-添加与搜索单词-数据结构设计"><a href="#211-添加与搜索单词-数据结构设计" class="headerlink" title="211. 添加与搜索单词 - 数据结构设计"></a>211. 添加与搜索单词 - 数据结构设计</h4><p><code>数据结构设计</code> <code>单词查找树</code><br>题目：<a href="https://leetcode-cn.com/problems/add-and-search-word-data-structure-design/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/add-and-search-word-data-structure-design/</a><br>通过/提交：0/4<br>思路：<br>错误：没太明白题干要求的addWords要求是怎么样的，搜索的部分应该是没问题了。前面搜索部分错了几次主要是将.转换为\w{1}或[a-z]{1}的过程没有思考好。</p><h4 id="221-最大正方形"><a href="#221-最大正方形" class="headerlink" title="221. 最大正方形"></a>221. 最大正方形</h4><p><code>动态规划</code> <code>图</code><br>题目：<a href="https://leetcode-cn.com/problems/maximal-square/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/maximal-square/</a><br>通过/提交：1/1<br>思路：<br>没怎么想明白，靠评论区题解过了。<br>假设每个遍历的点，都是要寻找的正方形的右下角。<br>那么对于此正方形，首先判断右下角是否缺失（0），缺失则直接为0；<br>如果不缺（1），那么它能达到的最大边长，应该是和另外三个点是右下角的正方形拼在一起后，得到的正方形边长。如果任意一个点的方形有缺失或边长较短，那么最大边长只能是这三个点的方形中<strong>较短</strong>的那个边长再+1，写成等式即为<code>dp[i][j] = Math.min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) + 1</code>，生成dp后再从dp中遍历出最大值即为结果。</p><h4 id="236-二叉树的最近公共祖先"><a href="#236-二叉树的最近公共祖先" class="headerlink" title="236. 二叉树的最近公共祖先"></a>236. 二叉树的最近公共祖先</h4><p><code>二叉树</code> <code>LCA</code><br>题目：<a href="https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/</a><br>通过/提交：1/2<br>思路：对于要寻找最近公共祖先的pq来说，要么左右子树一边一个，要么p或q本身就是祖先且另一个节点在左子树或右子树中。<br>因此通过递归的方式去查找 root.left 和 root.right ，直到 root = p 或 root = q（找到了）或者 root = null 没找到，递归返回后如果 left 和 right 的结果均不空，说明为第一种情况左右子树一边一个，返回 root 即为正确答案。如果left 和 right 有一边为空，一边不空，说明为第二种情况，返回不空的那个即为正确答案。</p><h4 id="390-消除游戏"><a href="#390-消除游戏" class="headerlink" title="390. 消除游戏"></a>390. 消除游戏</h4><p>题目：<a href="https://leetcode-cn.com/problems/elimination-game/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/elimination-game/</a><br>通过/提交：1/1<br>思路：由于要找的是最后剩下的那个数字，只需要让一个变量始终等于剩余数列的第一个数字即可。观察可知，当从左向右删除，或从右向左删除且数列长度为奇数时，第一个数字需要被删除，变量后移。另外可以发现第一轮删除是隔1删除，到了第二轮对于整个数列就变成了隔2删除，第三轮隔4删除，依次类推。因此每次只需要根据情况，判断变量是否需要后移，直到剩余数量为1时，返回变量。</p><h4 id="969-煎饼排序"><a href="#969-煎饼排序" class="headerlink" title="969. 煎饼排序"></a>969. 煎饼排序</h4><p><code>排序</code> <code>动态规划</code><br>题目：<a href="https://leetcode-cn.com/problems/pancake-sorting/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/pancake-sorting/</a><br>通过/提交：1/2<br>思路：和汉诺塔问题一个解法，每次都找到当前数列的最大值，如果最大值不在首位，则先将[0, maxValueIndex]进行翻转，将最大值换到首位，然后再翻转[0, length]，将最大值换到末位。递归执行[0, length - 1]的数列，直到最后数列长度为1，则排序完成。<br>错误：忘记考虑如果最大值本身就在第一位，则不需要再多执行一步。</p><h4 id="1003-检查替换后的词是否有效"><a href="#1003-检查替换后的词是否有效" class="headerlink" title="1003. 检查替换后的词是否有效"></a>1003. 检查替换后的词是否有效</h4><p><code>字符串操作</code> <code>匹配</code><br>题目：<a href="https://leetcode-cn.com/problems/check-if-word-is-valid-after-substitutions/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/check-if-word-is-valid-after-substitutions/</a><br>通过/提交：1/4<br>思路：以合法字符串作为split的分隔词，对目标字符串进行分割，余下的部分再组装后递归调用，直到字符串不再含有分隔词（split的结果集长度等于1），此时判断是否为合法字符串或空（自身就是合法串）<br>错误：一开始隐约觉得要递归处理，但是看了样例以后觉得先提交试试结果出错。另外就是没有注意自身就是合法串的情况。</p><h4 id="1023-驼峰式匹配"><a href="#1023-驼峰式匹配" class="headerlink" title="1023. 驼峰式匹配"></a>1023. 驼峰式匹配</h4><p><code>字符串操作</code> <code>匹配</code><br>题目：<a href="https://leetcode-cn.com/problems/camelcase-matching/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/camelcase-matching/</a><br>通过/提交：1/9<br>思路：通过匹配正则表达式来进行字符串的验证，需要特别注意①pattern串中可能出现全小写的情况②与其用^和$结尾来判断合法性，不如直接用substring来进行判断更有效③仔细归纳可能出现的情况④题目中只有大小写字母，不用正则表达式可能更简单<br>错误：对题目理解不清，过于急躁的提交了答案，应该更多地考虑可能出现的情况以及现阶段的驼峰匹配是什么思路。</p><h4 id="1404-将二进制表示减到-1-的步骤数"><a href="#1404-将二进制表示减到-1-的步骤数" class="headerlink" title="1404. 将二进制表示减到 1 的步骤数"></a>1404. 将二进制表示减到 1 的步骤数</h4><p>题目：<a href="https://leetcode-cn.com/problems/number-of-steps-to-reduce-a-number-in-binary-representation-to-one/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/number-of-steps-to-reduce-a-number-in-binary-representation-to-one/</a><br>通过/提交：1/2<br>思路：直接对二进制进行操作：如果末尾为0，表示偶数，直接弹出末尾（&gt;&gt; 1表示除以2）；如果末尾为1，表示奇数，需要先 +1，从后往前遇到0变1，直到遇到第一个0变1（进位）提前结束遍历。如果结束遍历仍未遇0，则需unshift以进位。<br>错误：本来想将二进制转换为十进制后再处理，但是由于题目的二进制数字最大可能有500位，超过了JS的安全数大小（53位，2的53次方），所以在超大数字处理时会有错误。</p><h3 id="困难"><a href="#困难" class="headerlink" title="困难"></a>困难</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;@[toc]&lt;/p&gt;&lt;h2 id=&quot;总体进度&quot;&gt;&lt;a href=&quot;#总体进度&quot; class=&quot;headerlink&quot; title=&quot;总体进度&quot;&gt;&lt;/a&gt;总体进度&lt;/h2&gt;&lt;h2 id=&quot;分类详情&quot;&gt;&lt;a href=&quot;#分类详情&quot; class=&quot;headerlink&quot; tit
+      
+    
+    </summary>
+    
+    
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习记录" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="刷题" scheme="http://yoursite.com/tags/%E5%88%B7%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>如何下载B站的音视频并进行简单剪辑</title>
@@ -48,9 +78,9 @@
     <link href="http://yoursite.com/2019/09/23/2019-09-21-Daily/"/>
     <id>http://yoursite.com/2019/09/23/2019-09-21-Daily/</id>
     <published>2019-09-23T13:19:53.000Z</published>
-    <updated>2019-09-30T13:22:57.585Z</updated>
+    <updated>2019-10-21T14:03:52.282Z</updated>
     
-    <content type="html"><![CDATA[<p>才刚九月中旬天气就开始变化无常，前几天还是一身夏日装束，到了周末却突然凉风瑟瑟，俨然已经是初秋了。这个周末，是九九拍板决定去凤凰街压马路，一边闲逛一边吃吃喝喝。 <em>凤凰街南抵十全街，中段在原南仓桥（1958年拆除）与十梓街垂直交叉，北出干将东路。</em> 与之前去过的十全街、相门、苏州大学和平江路都很近，只需要地铁到临顿路2号口出，直行一小段就到了凤凰路与干将东路的路口了。</p><a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<p>才刚九月中旬天气就开始变化无常，前几天还是一身夏日装束，到了周末却突然凉风瑟瑟，俨然已经是初秋了。这个周末，是九九拍板决定去凤凰街压马路，一边闲逛一边吃吃喝喝。 <em>凤凰街南抵十全街，中段在原南仓桥（1958年拆除）与十梓街垂直交叉，北出干将东路。</em> 与之前去过的十全街、相门、苏州大学和平江路都很近，只需要地铁到临顿路2号口出，直行一小段就到了凤凰路与干将东路的路口了。</p><a id="more"></a><ol><li>熙盛源<br>去熙盛源大部分是因为我爸之前无意间提到想吃，而我碰巧一年前和舍友同游无锡时也去过一次，想着在苏州吃到机会难得，因此就把午饭押宝在了熙盛源。点的是<strong>小笼包</strong>，<strong>开洋拌馄饨</strong>和一碗<strong>鲜肉小馄饨</strong>，基本都是这店的招牌。吃下来特别惊艳的是开洋拌馄饨，</li></ol>]]></content>
     
     <summary type="html">
     
